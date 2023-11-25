@@ -9,6 +9,7 @@ const app = express()
 app.use(express.json())
 
 app.use("/user", require('./routes/users/route'))
+app.use("/products", require("./routes/products/route"))
 
 app.listen(process.env.PORT, () => {
     console.log(`Server started at port ${process.env.PORT}`)
